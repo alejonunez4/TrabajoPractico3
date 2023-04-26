@@ -20,9 +20,9 @@ namespace TrabajoPractico3.Controllers
         }
 
         [HttpGet]
-        public string Index()
+        public IActionResult Index()
         {
-            return "Informacion Guardada";
+            return RedirectToAction("MasInfo", "PersonasInformacion");
         }
 
         public IActionResult ConsultarInfo()
