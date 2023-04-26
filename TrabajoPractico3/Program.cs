@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using TrabajoPractico3.Context;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<TrabajoPractico3Context>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("PersonasInformacionContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

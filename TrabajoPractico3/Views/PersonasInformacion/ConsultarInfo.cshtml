@@ -1,0 +1,21 @@
+﻿@model TrabajoPractico3.Models.PersonasInformacion
+@{
+    ViewData["Title"] = "Consultar Información";
+}
+
+<div class="container">
+    <div class="text-center">
+        <h1>Pantalla para consultar la informacion guardada</h1>
+    </div>
+    <form asp-action="TraerInfo" method="GET" class="mt-3 validationForm" novalidate>
+                <label asp-for="Id" class="form-label mb-3">@Html.DisplayFor(m => m.Nombre)</label>
+                <input asp-for="Id" type="number" placeholder="Id" class="form-control mb-3" id="exampleInputId1" maxlength="32" pattern="[0-9]{1,10}" required>
+                <div class="invalid-feedback mb-3">
+                    Debe ingresar un numero de Id para poder realiza la consulta.
+                </div>
+                <div class="valid-feedback mb-3">
+                </div>
+                <button type="submit" class="btn btn-danger">Consultar</button>
+    </form>
+</div>
+<script src="~/js/Scripts/validationForm.js"></script>

@@ -2,7 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container text-center d-flex">
+    <div class="card bg-dark" style="width: 18rem; height: 31rem;">
+        <div class="card-body row align-items-center">
+            <h6 class="card-title text-white">Ingresa en Mayo de 2023</h6>
+            <h5 class="card-subtitle mb-2 text-white">Comenzá tu carrera en Mayo</h5>
+            <p class="card-text text-white">
+                Estudía en la Universidad más innovadora de América Latina.
+            </p>
+            <a href="@Url.Action("MasInfo", "Home")" class="card-link text-white">Conoce más</a>
+        </div>
+    </div>
+    <div class="container">
+        <img src="" class="img-fluid" alt="Imagen escuela">
+    </div>
 </div>

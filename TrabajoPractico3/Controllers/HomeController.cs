@@ -18,6 +18,21 @@ namespace TrabajoPractico3.Controllers
             return View();
         }
 
+        public IActionResult CarrerasOnline()
+        {
+            return View();
+        }
+
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
+        public IActionResult MasInfo()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

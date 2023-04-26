@@ -1,0 +1,95 @@
+﻿@model TrabajoPractico3.Models.PersonasInformacion
+@{
+    ViewData["Title"] = "Más Información";
+}
+
+<div class="container">
+    <div class="d-flex justify-content-around">
+        <div class="card bg-dark" style="width:30rem; height: 30rem;">
+            <div class="card-body row align-items-baseline">
+                <h2 class="text-center text-white">Conoce mas sobre nuestras carreras:</h2><br>
+                <p class="text-center text-white">
+                    Completa el formulario y recibiras inmediatamente informacion
+                    sobre
+                    la carrera, el plan de estudios, los
+                    aranceles y la expericencia de estudiar en Palermo. <br />
+                    Tambien puedes comunicarte con nosotros por cualquier duda o consulta.
+                </p>
+                <a href="@Url.Action("Contacto", "Home")" class="card-link text-white text-center">Contacto</a>
+            </div>
+        </div>
+        <div class="container">
+            <form asp-action="MasInfo" method="POST" class="mt-3 validationForm" novalidate>
+                <div class="row mb-3">
+                    <label asp-for="Nombre" class="col-form-label col-2 text-center">@Html.DisplayFor(m => m.Nombre)</label>
+                    <div class="col-10">
+                        <input asp-for="Nombre" type="text" placeholder="Pepito" class="form-control" id="exampleInputNombre1" maxlength="32" pattern="[A-Za-z]{1,32}" required>
+                        <div class="invalid-feedback">
+                            El nombre debe contener de 4 a 32 digitos y solo puede contener letras.
+                        </div>
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label asp-for="Apellido" class="col-form-label col-2 text-center">@Html.DisplayFor(m => m.Apellido)</label>
+                    <div class="col-10">
+                        <input asp-for="Apellido" type="text" placeholder="Rojas" class="form-control" id="exampleInputApellido1" maxlength="32" pattern="[A-Za-z]{1,32}" required>
+                        <div class="invalid-feedback">
+                            El apellido debe contener de 4 a 32 digitos y solo puede contener letras.
+                        </div>
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label asp-for="Nacionalidad" class="col-form-label col-2 text-center">@Html.DisplayFor(m => m.Nacionalidad)</label>
+                    <div class="col-10">
+                        <input asp-for="Nacionalidad" type="text" placeholder="Argentino" class="form-control" id="exampleInputNacionalidad1" maxlength="32" pattern="[A-Za-z]{1,32}" required>
+                        <div class="invalid-feedback">
+                            La nacionalidad debe contener de 4 a 32 digitos y solo puede contener letras.
+                        </div>
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mb-3">
+                    <label asp-for="Email" class="col-form-label col-2 text-center">@Html.DisplayFor(m => m.Email)</label>
+                    <div class="col-10">
+                        <input asp-for="Email" type="email" placeholder="pepito123@gmail.com" class="form-control" id="exampleInputEmail1" pattern="[a-z0-9._%+-]+&#64;[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        <div class="invalid-feedback">
+                            El correo solo puede contener letras, números, puntos y guion bajo.
+                        </div>
+                        <div class="valid-feedback">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label asp-for="Telefono" class="col-form-label col-2 text-center">@Html.DisplayFor(m => m.Telefono)</label>
+                    <div class="col-10">
+                        <input asp-for="Telefono" type="tel" placeholder="3493406626" class="form-control" id="exampleInputTelefono1" maxlength="10" pattern="[0-9]{4}[0-9]{6}" required>
+                        <div class="invalid-feedback">
+                            El telefono tiene un maximo de 10 digitos y solo puede contener números. 
+                        </div>
+                        <div class="valid-feedback">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mb-3">
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger">Quiero más información</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="~/js/Scripts/validationForm.js"></script>
